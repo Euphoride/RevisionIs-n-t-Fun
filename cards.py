@@ -1,6 +1,9 @@
 import random
 import time
 
+# warning: reading this code may have cause damage to your mental health. the author, me, has shamelessly used "foo" and "bar" as variable names
+# i think that warrants such a warning.
+
 def printStuff1(foo, bar):
     DisplayText = "What is the proper term for \"" + foo[:-1] + "\"?"
 
@@ -14,6 +17,9 @@ def printStuff1(foo, bar):
     print("")
 
     if yn in ["y", "Y"]:
+        points += 10
+        print("Great! Points: " + points)
+        print("")
         currentWentBy = wentBy[holderForX] - 1
 
         tempHolderForWeight = weights[holderForX]
@@ -27,6 +33,9 @@ def printStuff1(foo, bar):
                 weights[x] = weights[x] - (difference / (len(weights) - 1))
 
     else:
+        points -= 5
+        print("Better luck next time! Points: " + points)
+        print("")
         currentWentBy = wentBy[holderForX] + 1
 
         tempHolderForWeight = weights[holderForX]
@@ -39,7 +48,7 @@ def printStuff1(foo, bar):
             if weights[holderForX] != weights[x]:
                 weights[x] = weights[x] - (difference / (len(weights) - 1))
 
-    return "bloop"
+    return "hi there"
 
 def printStuff2(foo, bar):
     DisplayText = "What does the term \"" + foo[:-1] + "\" mean?"
@@ -54,6 +63,9 @@ def printStuff2(foo, bar):
     print("")
 
     if yn in ["y", "Y"]:
+        points += 10
+        print("Great! Points: " + points)
+        print("")
         currentWentBy = wentBy[holderForX] - 1
 
         tempHolderForWeight = weights[holderForX]
@@ -67,6 +79,9 @@ def printStuff2(foo, bar):
                 weights[x] = weights[x] - (difference / (len(weights) - 1))
 
     else:
+        points -= 5
+        print("Better luck next time! Points: " + points)
+        print("")
         currentWentBy = wentBy[holderForX] + 1
 
         tempHolderForWeight = weights[holderForX]
@@ -79,7 +94,7 @@ def printStuff2(foo, bar):
             if weights[holderForX] != weights[x]:
                 weights[x] = weights[x] - (difference / (len(weights) - 1))
 
-    return "bloop"
+    return "#subtopewdiepie"
 
 
 inputFileHandler1 = open("names.txt", 'r')
